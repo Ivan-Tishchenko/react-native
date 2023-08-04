@@ -1,0 +1,96 @@
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  authBacground: {
+    backgroundColor: "#fff",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    borderTopRightRadius: 25,
+    borderTopLeftRadius: 25,
+    padding: 16,
+    paddingBottom: 78,
+  },
+  background: {
+    width: "100%",
+    height: "100%",
+  },
+  addAvatarButton: {
+    width: 25,
+    height: 25,
+    borderRadius: 999,
+    borderColor: "#FF6C00",
+    borderStyle: "solid",
+    borderWidth: 1,
+    left: 107,
+    top: 81,
+    right: 0,
+    bottom: 14,
+    padding: 5.5,
+  },
+  addAvatarButtonIcon: {
+    width: 13,
+    height: 13,
+  },
+  avatarBackground: {
+    width: 120,
+    height: 120,
+
+    position: "relative",
+    top: 0,
+    left: "50%",
+    transform: [{ translateX: -61 }, { translateY: -61 }],
+    backgroundColor: "#F6F6F6",
+    borderRadius: 16,
+    marginBottom: -61,
+  },
+  registrationHeader: {
+    color: "#212121",
+    textAlign: "center",
+    fontSize: 30,
+    fontStyle: "normal",
+    fontWeight: 500,
+    letterSpacing: 0.3,
+    fontFamily: "Roboto-Regular",
+    marginTop: 32,
+    marginBottom: 33,
+  },
+  authInputs: {
+    fontFamily: "Roboto-Regular",
+    marginTop: 16,
+    backgroundColor: "#F6F6F6",
+    borderColor: "#E8E8E8",
+    borderStyle: "solid",
+    borderWidth: 1,
+    height: 50,
+    borderRadius: 8,
+    padding: 16,
+  },
+  authInputsFocus: {
+    borderColor: "#FF6C00",
+    borderWidth: 1,
+  },
+  sendButton: {
+    backgroundColor: "#FF6C00",
+    marginTop: 43,
+    padding: 16,
+    borderRadius: 100,
+  },
+  sendButtonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: 400,
+    fontFamily: "Roboto-Regular",
+    textAlign: "center",
+  },
+  link: {},
+  textLikeLink: {
+    color: "#1B4371",
+    fontSize: 16,
+    fontFamily: "Roboto-Regular",
+    fontWeight: 400,
+  },
+});
+
+export default styles;
