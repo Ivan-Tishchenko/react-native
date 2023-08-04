@@ -22,6 +22,9 @@ function RegistrationScreen() {
   const [emailFokus, setEmailFocus] = useState(false);
   const [passwordFokus, setPasswordFocus] = useState(false);
 
+  const [isPasswordShow, setIsPasswordShow] =
+    useState(true);
+
   const sendForm = () => {
     console.log("login: ", textLogin);
     console.log("Email: ", textEmail);
@@ -93,27 +96,41 @@ function RegistrationScreen() {
             value={textEmail}
             placeholder="Адреса електронної пошти"
           />
-          <TextInput
-            onFocus={() => setPasswordFocus(true)}
-            onBlur={() => setPasswordFocus(false)}
-            style={
-              passwordFokus
-                ? {
-                    ...styles.authInputs,
-
-                    ...styles.authInputsFocus,
-                  }
-                : {
-                    ...styles.authInputs,
-                  }
-            }
-            placeholderTextColor={"#BDBDBD"}
-            onChange={(e) =>
-              onChangeTextPassword(e.nativeEvent.text)
-            }
-            value={textPassword}
-            placeholder="Пароль"
-          />
+          <View style={{ marginTop: 16 }}>
+            <TextInput
+              secureTextEntry={isPasswordShow}
+              onFocus={() => setPasswordFocus(true)}
+              onBlur={() => setPasswordFocus(false)}
+              style={
+                passwordFokus
+                  ? {
+                      ...styles.authInputs,
+                      marginTop: 0,
+                      ...styles.authInputsFocus,
+                    }
+                  : {
+                      ...styles.authInputs,
+                      marginTop: 0,
+                    }
+              }
+              placeholderTextColor={"#BDBDBD"}
+              onChange={(e) =>
+                onChangeTextPassword(e.nativeEvent.text)
+              }
+              value={textPassword}
+              placeholder="Пароль"
+            />
+            <Pressable
+              onPress={() =>
+                setIsPasswordShow(!isPasswordShow)
+              }
+              style={styles.showPasswordButton}
+            >
+              <Text style={styles.showPasswordText}>
+                Показати
+              </Text>
+            </Pressable>
+          </View>
           <Pressable
             onPress={sendForm}
             style={styles.sendButton}

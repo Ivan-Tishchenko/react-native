@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
   authInputsFocus: {
     borderColor: "#FF6C00",
     borderWidth: 1,
+    backgroundColor: "#fff",
   },
   sendButton: {
     backgroundColor: "#FF6C00",
@@ -89,6 +90,17 @@ const styles = StyleSheet.create({
     color: "#1B4371",
     fontSize: 16,
     fontFamily: "Roboto-Regular",
+    fontWeight: 400,
+  },
+  showPasswordButton: {
+    position: "absolute",
+    right: 16,
+    top: 16,
+  },
+  showPasswordText: {
+    color: "#1B4371",
+    fontFamily: "Roboto-Regular",
+    fontSize: 16,
     fontWeight: 400,
   },
 });
