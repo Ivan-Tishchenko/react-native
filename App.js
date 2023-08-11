@@ -4,6 +4,7 @@ import RegistrationScreen from "./RegistrationScreen";
 
 import { useFonts } from "expo-font";
 import LoginScreen from "./LoginScreen";
+import PostsScreen from "./PostsScreen";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,7 +21,8 @@ export default function App() {
 
   return (
     // <RegistrationScreen />
-    <LoginScreen />
+    // <LoginScreen />
+    <PostsScreen />
   );
 }
 

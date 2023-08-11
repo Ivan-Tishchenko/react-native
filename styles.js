@@ -1,5 +1,7 @@
 import { StyleSheet } from "react-native";
 
+const Roboto = "Roboto-Regular";
+
 const styles = StyleSheet.create({
   authBacground: {
     backgroundColor: "#fff",
@@ -36,7 +38,6 @@ const styles = StyleSheet.create({
   avatarBackground: {
     width: 120,
     height: 120,
-
     position: "relative",
     top: 0,
     left: "50%",
@@ -52,12 +53,12 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: 500,
     letterSpacing: 0.3,
-    fontFamily: "Roboto-Regular",
+    fontFamily: Roboto,
     marginTop: 32,
     marginBottom: 33,
   },
   authInputs: {
-    fontFamily: "Roboto-Regular",
+    fontFamily: Roboto,
     marginTop: 16,
     backgroundColor: "#F6F6F6",
     borderColor: "#E8E8E8",
@@ -82,14 +83,14 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: 400,
-    fontFamily: "Roboto-Regular",
+    fontFamily: Roboto,
     textAlign: "center",
   },
   link: {},
   textLikeLink: {
     color: "#1B4371",
     fontSize: 16,
-    fontFamily: "Roboto-Regular",
+    fontFamily: Roboto,
     fontWeight: 400,
   },
   showPasswordButton: {
@@ -99,9 +100,72 @@ const styles = StyleSheet.create({
   },
   showPasswordText: {
     color: "#1B4371",
-    fontFamily: "Roboto-Regular",
+    fontFamily: Roboto,
     fontSize: 16,
     fontWeight: 400,
+  },
+  avatarBackgroundPostsScreen: {
+    width: 60,
+    height: 60,
+    backgroundColor: "#F6F6F6",
+    borderRadius: 16,
+    marginRight: 8,
+  },
+  logoutPostsScreeen: {
+    position: "absolute",
+    bottom: 10,
+    right: 16,
+  },
+  postsScreenHeader: {
+    padding: 16,
+    paddingTop: 44,
+    paddingBottom: 11,
+    borderBottomColor: "#000",
+    borderBottomWidth: 1,
+  },
+  postsScreenHeaderText: {
+    color: "#212121",
+    textAlign: "center",
+    fontFamily: Roboto,
+    fontSize: 17,
+    fontStyle: "normal",
+    fontWeight: 500,
+  },
+  postsScreenBody: {
+    paddingLeft: 16,
+    paddingRight: 16,
+    paddingTop: 16,
+    height: `${641 / 8.12}%`,
+    display: "flex",
+    flexDirection: "column",
+  },
+  postImage: {
+    width: "100%",
+    height: 240,
+    borderRadius: 8,
+  },
+  posts: {
+    width: "auto",
+    height: "auto",
+    marginTop: 34,
+    marginBottom: 34,
+    display: "flex",
+    flexDirection: "column",
+  },
+  postMoreInformationBlock: {
+    display: "flex",
+    flexDirection: "row",
+    alignContent: "space-between",
+    justifyContent: "space-between",
+  },
+  postMoreInformationText: {
+    marginTop: 8,
+    marginBottom: 8,
+    color: "#212121",
+    fontFamily: Roboto,
+    fontSize: 16,
+    fontStyle: "normal",
+    fontWeight: 500,
   },
 });
 
