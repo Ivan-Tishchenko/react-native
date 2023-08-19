@@ -1,10 +1,17 @@
+import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import RegistrationScreen from "./RegistrationScreen";
 
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+
 import { useFonts } from "expo-font";
 import LoginScreen from "./LoginScreen";
 import PostsScreen from "./PostsScreen";
+import CreatePostsScreen from "./CreatePostsScreen";
+
+const MainStack = createStackNavigator();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,9 +27,27 @@ export default function App() {
   }
 
   return (
-    <RegistrationScreen />
-    // <LoginScreen />
-    // <PostsScreen />
+    <NavigationContainer>
+      <MainStack.Navigator initialRouteName="Create post">
+        <MainStack.Screen
+          name="Login"
+          component={LoginScreen}
+        />
+        <MainStack.Screen
+          name="Registration"
+          component={RegistrationScreen}
+        />
+
+        <MainStack.Screen
+          name="PostsScreen"
+          component={PostsScreen}
+        />
+        <MainStack.Screen
+          name="Create post"
+          component={CreatePostsScreen}
+        />
+      </MainStack.Navigator>
+    </NavigationContainer>
   );
 }
 

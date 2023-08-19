@@ -16,8 +16,11 @@ import background from "./images/background.jpg";
 import addAvatarButtonIcon from "./images/Union.png";
 
 import styles from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 function RegistrationScreen() {
+  const navigation = useNavigation();
+
   const [textLogin, onChangeTextLogin] = useState("");
   const [textEmail, onChangeTextEmail] = useState("");
   const [textPassword, onChangeTextPassword] = useState("");
@@ -176,7 +179,9 @@ function RegistrationScreen() {
               <Text style={styles.textLikeLink}>
                 Вже є акаунт?{" "}
               </Text>
-              <Pressable>
+              <Pressable
+                onPress={() => navigation.navigate("Login")}
+              >
                 <Text
                   style={{
                     ...styles.textLikeLink,

@@ -11,12 +11,16 @@ import {
 } from "react-native";
 import { useState } from "react";
 
+import { useNavigation } from "@react-navigation/native";
+
 import background from "./images/background.jpg";
 import addAvatarButtonIcon from "./images/Union.png";
 
 import styles from "./styles";
 
 function LoginScreen() {
+  const navigation = useNavigation();
+
   const [textEmail, onChangeTextEmail] = useState("");
   const [textPassword, onChangeTextPassword] = useState("");
 
@@ -33,6 +37,8 @@ function LoginScreen() {
 
     onChangeTextEmail("");
     onChangeTextPassword("");
+
+    
   };
 
   return (
@@ -134,7 +140,11 @@ function LoginScreen() {
               <Text style={styles.textLikeLink}>
                 Немає акаунту?{" "}
               </Text>
-              <Pressable>
+              <Pressable
+                onPress={() =>
+                  navigation.navigate("Registration")
+                }
+              >
                 <Text
                   style={{
                     ...styles.textLikeLink,

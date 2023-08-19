@@ -86,7 +86,6 @@ const styles = StyleSheet.create({
     fontFamily: Roboto,
     textAlign: "center",
   },
-  link: {},
   textLikeLink: {
     color: "#1B4371",
     fontSize: 16,
@@ -166,6 +165,49 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontStyle: "normal",
     fontWeight: 500,
+  },
+  createPostsText: {
+    color: "#BDBDBD",
+    fontFamily: Roboto,
+    fontSize: 16,
+    fontStyle: "normal",
+    fontWeight: 400,
+  },
+  createPostsInput: {
+    height: 50,
+    borderBottomColor: "#E8E8E8",
+    borderBottomWidth: 1,
+    fontFamily: Roboto,
+  },
+  createPostsButtonAdd: {
+    position: "absolute",
+    borderRadius: 60,
+    width: 60,
+    height: 60,
+    top: "50%",
+    left: "50%",
+    transform: [{ translateX: -30 }, { translateY: -30 }],
+  },
+  createPostsButtonAddImage: {
+    width: 20,
+    height: 18,
+    position: "relative",
+    top: "50%",
+    left: "50%",
+    transform: [{ translateX: -10 }, { translateY: -9 }],
+  },
+  createPostsButtonCreate: {
+    paddingHorizontal: 32,
+    paddingVertical: 16,
+    borderRadius: 100,
+    display: "flex",
+    alignItems: "center",
+  },
+  createPostsButtonCreateText: {
+    fontFamily: Roboto,
+    fontSize: 16,
+    fontStyle: "normal",
+    fontWeight: 400,
   },
 });
 
